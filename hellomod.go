@@ -5,6 +5,7 @@ import (
 )
 
 //SayHello function
-func SayHello() {
-	fmt.Println("Hello World v1.0.1!!!")
+func SayHello(name string) {
+	fmt.Printf("Hello %s", name)
+	fmt.Println("Hello World v2.0.0!!!")
 }

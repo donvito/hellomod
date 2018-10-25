@@ -17,7 +17,7 @@ With the current version 1.11, you can now build your Go application outside the
 
 I created a sample go module which you can use to play around with. Here's the source code https://github.com/donvito/hellomod. Feel free to fork the repo and use for your own learning. The module has 3 [releases or versions](https://github.com/donvito/hellomod/releases). 
 
-![Screenshot-2018-10-07-20.11.02](/content/images/2018/10/Screenshot-2018-10-07-20.11.02.png)
+![Screenshot-2018-10-07-20.11.02](http://www.melvinvivas.com/content/images/2018/10/Screenshot-2018-10-07-20.11.02.png)
 
 To demonstrate how to use go modules in your application, let's assume that hellomod is a third-party module you require in your application.
 
@@ -58,7 +58,7 @@ github.com/donvito/hellomod v1.0.1/go.mod h1:DuOSvrBCwGkjX0WS5ohdpC/q67fS0Mde3LE
 ```
 
 Here's a summary of the commands we've executed so far
-![Screenshot-2018-10-07-14.39.59](/content/images/2018/10/Screenshot-2018-10-07-14.39.59.png)
+![Screenshot-2018-10-07-14.39.59](http://www.melvinvivas.com/content/images/2018/10/Screenshot-2018-10-07-14.39.59.png)
 
 You can run the binary created by "go build" to check if we are using hellomod v1.0.1.
 

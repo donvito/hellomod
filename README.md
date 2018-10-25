@@ -24,7 +24,17 @@ To demonstrate how to use go modules in your application, let's assume that hell
 Let's create a client application to use the [hellomod module](https://github.com/donvito/hellomod/). Here is some code we can start with. Save this as main.go in any directory you wish.
 
 **main.go**
-<script src="https://gist.github.com/donvito/5ca17d78bb651a8c5fb8718f2cc0e28a.js"></script>
+```
+package main
+
+import (
+    "github.com/donvito/hellomod"
+)
+
+func main() {
+	hellomod.SayHello()
+}
+```
 
 Initialize module support. Make sure GOPATH is not set so we can automatically use the modules feature in Go 1.11. Execute the command below in the terminal. 
 ```
@@ -93,7 +103,16 @@ func SayHello() {
 To upgrade to a major version, you need to change the version in your imports.
 
 **main.go**
-<script src="https://gist.github.com/donvito/fe8d4f8b1ccfb953f224764f37b1d485.js"></script>
+```
+package main
+import (
+    "github.com/donvito/hellomod/v2"
+)
+ 
+func main() {
+         hellomod.SayHello("Melvin")
+}
+```
 
 Then build the application and run the binary **"hello"**.
 ```
@@ -115,10 +134,19 @@ require (
 Yes, it is possible to use different versions of the same module. Here is an example where we can see that the 2 different versions of a module can be used independently. You need to use an alias for each version to avoid clashes.
 
 **main.go ( *client application using 2 different versions of the hellomod module* )**
+```
+package main
 
-<script src="https://gist.github.com/donvito/4d36f696c6286878d61b712025452924.js"></script>
+import (
+	hellomod "github.com/donvito/hellomod"
+	hellomodV2 "github.com/donvito/hellomod/v2"
+)
 
-
+func main() {
+	hellomod.SayHello()
+	hellomodV2.SayHello("Melvin")
+}
+```
 
 That's it! Hope you learned something from this article! :)
 

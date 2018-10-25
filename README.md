@@ -1,5 +1,7 @@
 This is a sample go module to demonstrate new functionality in Go v1.11
 
+# Introduction to Go Modules in Go v1.11, Goodbye GOPATH!
+
 When you start learning Go, it takes some time to understand how to setup your development environment. For me, there was a bit of a learning curve to understand how the compiler works in terms of searching for dependencies. 
 
 One mandatory step you need to do when setting up your development environment, is configure the GOPATH environment variable. $GOPATH is used by the Go compiler to search for dependencies when building your Go application. $GOPATH contains source code and binaries.
